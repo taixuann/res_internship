@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-SRC="$HOME/workspace/projects/active_projects/res_internship"
+# Make paths completely relative and portable
 DST="$(cd "$(dirname "$0")" && pwd)"
+SRC="$(cd "$(dirname "$0")/.." && pwd)"
 
 echo "Copying dashboard from $SRC to $DST"
 
